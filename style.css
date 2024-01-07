@@ -1,0 +1,448 @@
+/* Import Lato from google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+/* Reset page values */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 46.5px;
+  background-color: #000;
+  z-index: 1;
+}
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 14px 24px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__item:hover .navbar__link {
+  color: #000;
+  background-color: #ccc;
+}
+
+.navbar__item:nth-child(5):hover .navbar__menu {
+  display: block;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  list-style-type: none;
+  width: 160px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+
+.navbar__menu-link {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  padding: 8px 16px;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar__menu-link:hover {
+  background-color: #ccc;
+}
+
+.navbar__search {
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+}
+
+.navbar__search:hover .navbar__search-btn {
+  background-color: red;
+}
+
+.navbar__search-btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  height: 100%;
+  padding: 0 24px;
+  cursor: pointer;
+}
+
+/* HEADER START */
+.header {
+  margin-top: 46px;
+  height: 600px;
+  background-image: url(./imgs/chicago.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 25px;
+  animation: slide 6s infinite steps(1);
+}
+
+@keyframes slide {
+  0% {
+    background-image: url(./imgs/chicago.jpg);
+  }
+  33.33% {
+    background-image: url(./imgs/los.jpg);
+  }
+  66.33% {
+    background-image: url(./imgs/ny.jpg);
+  }
+}
+
+.header__title::before {
+  content: "Chicgo";
+  margin: 15px 0;
+  color: #fff;
+  letter-spacing: 3px;
+  animation: title 6s infinite steps(1);
+}
+
+@keyframes title {
+  0% {
+    content: "Chicgo";
+  }
+  33.33% {
+    content: "Los Angeles";
+  }
+  66.33% {
+    content: "New York";
+  }
+}
+
+.header__paragraph::after {
+  content: "Thank you, Chicago - A night we won't forget.";
+  color: #fff;
+  animation: parag 6s infinite steps(1);
+}
+
+@keyframes parag {
+  0% {
+    content: "Thank you, Chicago - A night we won't forget.";
+  }
+  33.33% {
+    content: "We had the best time playing at Venice Beach!";
+  }
+  66.33% {
+    content: "The atmosphere in New York is lorem ipsum";
+  }
+}
+
+.header__title,
+.header__paragraph {
+  margin: 15px 0;
+}
+
+/* HEADER END */
+
+/* START BAND */
+.band {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding: 64px 16px;
+}
+
+.band__title{
+  margin: 10px 0;
+  letter-spacing: 5px;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.band__parag--one{
+  margin: 15px 0;
+  opacity: .6;
+}
+
+.band__parag--two{
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.band__imgs{
+  display: flex;
+  justify-content: space-around;
+}
+
+.band__band__img--parag{
+  margin: 15px 0;
+}
+
+.band__band__imgs__img{
+  width: 60.33%;
+}
+
+
+
+
+/* END BAND */
+
+/* Start Section */
+
+.section {
+  color: #ccc;
+  background-color: #000;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px;
+  text-align: center;
+  padding: 64px 16px;
+}
+
+.section__title {
+  margin: 10px 0;
+}
+
+.section__paragraph {
+  margin: 15px 0;
+  opacity: 0.5;
+}
+
+.section__info {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #fff;
+  color: #000;
+  text-align: left;
+}
+
+.section__paragraph2 {
+  opacity: 0.8;
+  padding: 8px 16px;
+}
+
+.section__paragraph--span--red {
+  margin-left: 16px;
+  background-color: red;
+  color: #fff;
+  opacity: 1 !important;
+  padding: 0 8px;
+  font-size: 15px;
+}
+
+.section__paragraph2:not(:last-of-type) {
+  border-bottom: 1px solid #ddd;
+}
+
+.section__paragraph--span3 {
+  padding: 0 8px;
+  background-color: #000;
+  color: #ccc;
+  border-radius: 50%;
+}
+
+.section__paragraph3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.city__cards--card--one {
+  background-color: #fff;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.city__cards {
+  padding: 40px 0px;
+}
+
+.city__cards__cardone--img {
+  width: 100%;
+  display: block;
+}
+
+.city__cards-one--title {
+  color: #000;
+  margin: 15px 0;
+}
+
+.city__cards__date {
+  margin: 15px 0;
+}
+
+.city__cards--card--one--paragraph {
+  margin: 15px 0;
+}
+
+.city__cards--card--one--button {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+}
+
+.city__cards--info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 16px;
+}
+
+.city__cards--card--one {
+  padding-inline-start: 0 8px;
+}
+
+.city__cards {
+  margin-right: auto;
+  margin-left: auto;
+  width: 800px;
+  display: flex;
+  gap: 10px;
+}
+
+.city__cards--card--one--button:hover{
+  background-color: #ccc;
+  color: #000;
+}
+/* END SECTION */
+/* SART CONTACT */
+.contact{
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 64px 16px;
+  text-align: center;
+}
+
+.contact__title{
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.contact__parag{
+  margin: 15px 0;
+  opacity: .5;
+}
+
+.contact__address{
+  line-height: 2;
+  text-align: justify;
+}
+
+.fa-location-dot,
+.fa-phone,
+.fa-envelope{
+  margin-right: 10px;
+}
+
+.contact__form{
+  padding: 32px 0;
+}
+
+.contact__form{
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__form--name,
+.contact__form--email,
+.contact__form--message{
+  padding: 8px;
+}
+
+.contact__form--name,
+.contact__form--email{
+  width: 174px;;
+}
+
+.contact__address,
+.form{
+  width: 50%;
+}
+
+.form div{
+  display: inline-block;
+  padding: 0 8px;
+}
+/* END CONTACT */
+
+.form div:not(:last-child){
+  margin-bottom: 8px;
+}
+
+.contact__form--message{
+  width: 100%;
+}
+
+input.contact__form--button {
+  margin: 15px;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  font-size: 15px;
+}
+
+.form{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form p{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact__form--button:hover{
+  background-color: #ccc;
+  color: #000;
+  cursor: pointer;
+}
+/* END CONTACT */
+/* START MAP */
+
+.map img{
+  width: 100%;
+  filter:grayscale(50%);
+}
+
+/* END MAP */
+/* START FOOTER */
+.footer{
+  padding: 64px 16px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.fa-brands{
+  font-size: 25px;
+  opacity: .5;
+}
+
+.footer p{
+  margin: 15px 0;
+}
+/* END FOOTER */
+
